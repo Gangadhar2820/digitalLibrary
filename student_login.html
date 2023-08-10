@@ -1,0 +1,271 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+
+
+<link rel="icon" type="image/x-icon" href="favicon-16x16.png">
+
+<title>Student Login page</title>
+
+<style>   
+
+.row{
+display:flex;
+height:100vh;
+border:2px solid black;
+
+
+
+
+}
+
+.left{
+
+flex:30%;
+
+height:100%;
+
+
+
+}
+
+.left iframe{
+
+
+height:100%;
+width:100%;
+
+
+}
+
+.right{
+
+
+height:100%;
+
+flex:50%;
+background-color:rgb(253,255,233,0.5);
+border:2px solid black;
+
+}
+
+.main{
+      position:absolute;
+      left:55.5%;
+      top:20%;
+     transform:translate(-10%,-10%);
+      width:400px;
+      padding:10px;
+      border:2px solid rgb(22,194,228,1);
+      background-color:white;
+}
+
+h1{
+   text-align:center;
+   padding:20px 0;
+   border-bottom:1px solid rgb(22,194,228,1);
+   margin-top:-40px;
+   color:rgb(22,194,228,1);
+
+
+}
+
+
+.avatar{
+       
+        position:relative;
+        transform:translate(-50%,-50%);
+        left:50%;
+        top:0%;
+        border:1px solid rgb(22,194,228,1);
+        margin:0;
+        border-radius:50%;
+        background-color:white;    
+       
+}
+
+
+form{
+
+    padding:0 40px;
+    box-sizing:border-box;
+
+}
+ 
+.user{
+  width:100%;
+  padding:0 5px;
+  height:40px;
+  font-size:16px;
+  border:none;
+  background:none;
+  outline:none
+
+}  
+
+
+.text_field{
+  position:relative;
+  border-bottom:2px solid #adadad;
+  margin:30px 0;
+}
+
+
+label{
+ position:absolute;
+ top:50%;
+ left:5px;
+ color:rgb(22,194,228,1);
+transform:translatey(-50%);
+font-size:16px;
+pointer-events:none;
+transition:0.5s;
+}
+
+
+input[type=text]:focus ~label,input[type=text]:valid ~label{
+top:-5px;
+color:rgb(22,194,228,1);
+}
+
+
+
+input[type=password]:focus ~label,input[type=password]:valid ~label{
+top:-5px;
+color:rgb(22,194,228,1);
+}
+
+
+
+
+input[type=submit]{
+margin-bottom:20px;
+width:100%;
+height:50px;
+border:1px solid;
+background:rgb(22,194,228,1);
+border-radius:25px;
+font-size:18px;
+color:#e9f4fb;
+font-weight:700;
+cursor:pointer;
+outline:none;
+}
+
+
+.forget{
+text-align:center;
+ margin:10px 0 10px 5px;
+color:black;
+
+}
+
+a:link{
+text-decoration:none;
+  background-color:transparent;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+<div   class="row">
+
+
+<div class="left">
+
+
+<iframe src="side_login.html" scrolling="no" name="change">
+
+</iframe>
+
+</div>
+
+
+
+
+
+
+
+<div class="right">
+
+
+
+<div class=main>
+
+<img src="2024644_login_user_avatar_person_users_icon.png" height=15% width=15%; class=avatar>
+
+<h1> Student Login</h1>
+
+<form method=post action="student_login_validation.py" autocomplete="off" target="change">
+
+<div class=text_field>
+
+<input type=text class=user name="uname" required>
+<span></span>
+<label >Username <span style="color:red;">*</span></label>
+
+</div>
+
+<div class=text_field>
+
+<input type=password class=user name="pass" required>
+<span></span>
+<label >Password <span style="color:red;">*</span></label>
+
+</div>
+
+<input type=submit value=Login >
+
+
+<div class=forget><a href="student_forget_password.html"><span style="color:rgb(22,194,228,1);">Forget Password?</span></a></div>
+
+<div class=forget>Are you member ? <a href="member_login.html" target=_self  ><span style="color:light red;"><span style="color:rgb(22,194,228,1);">Click Here</span></a></div>
+
+
+<div class=forget>If You Are New. <a href="student_register.html" target=_self  ><span style="color:rgb(22,194,228,1);">Register</span></a></div>
+
+</form>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+
+
+</html>

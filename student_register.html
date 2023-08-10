@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="icon" type="image/x-icon" href="favicon-16x16.png">
+
+<title>Library/Student-Registration form</title>
+
+<link type=stylesheet href="">
+
+<style>
+
+body{
+
+margin:0;
+padding:0;
+background-image:linear-gradient(to left ,#eecda3 , #ef629f);
+overflow:auto;
+font-family:"poppins",sans-serif;
+
+
+}
+
+.main1{
+
+position:absolute;
+left:10%;
+top:20%;
+
+
+width:80%;
+
+
+margin:10px;
+border:1px solid silver;
+ padding:40px;
+
+ box-sizing:border-box;
+ background-color:white;
+
+box-shadow:10px 10px 10px rgba(0,0,0,0.5);
+
+}
+
+h1{
+position:relative;
+top:20px;
+text-align:center;
+color:rgba(0,0,255,0.5);
+
+  font-family:"poppins",sans-serif;
+}
+
+
+.logo{
+height100px;
+width:100px;
+left:23%;
+
+position:absolute;
+
+}
+
+.required{
+
+color:red;
+}
+
+h3{
+
+
+text-align:center;
+margin-bottom:20px;
+padding:5px;
+
+
+border-bottom:1px solid silver;
+border-top:1px solid silver;
+
+}
+.padl1{
+position:absolute;
+right:100px;
+margin-bottom:20px;
+}
+
+.padl2{
+
+}
+
+input[type="submit"]{
+size:auto;
+
+background-color:green;
+border:ridge;
+color:white;
+text-align:center;
+border-radius:7px;
+font-size:18px;
+margin:4px 2px;
+cursor:pointer;
+}
+input[type="submit"]:active{
+
+
+background-color:#3e8e41;
+transform:translatey(4px);
+}
+
+
+
+
+input[type="reset"]{
+size:auto;
+
+background-color:red;
+border:ridge;
+color:white;
+text-align:center;
+border-radius:7px;
+font-size:18px;
+margin:4px 2px;
+cursor:pointer;
+}
+input[type="reset"]:active{
+
+
+background-color:rgba(255,0,0,0.5);
+transform:translatey(4px);
+}
+
+
+
+
+
+
+
+</style>
+
+<script >
+
+
+function myfun(){
+
+
+var x=document.getElementById("myform");
+
+var txt="Registered Successfully!\n"+"Username:"+x.elements[8].value+"\nPassword:"+x.elements[9].value;
+
+
+          
+
+
+}
+</script>
+ 
+
+
+
+
+</head>
+
+<body>
+
+
+<h1 >Student Registration Form</h1>
+<form action="student_register_database.py"  method="POST" id="myform" autocomplete="off">
+
+    
+<div class=main1>
+
+<h3>Student Information *</h3>
+
+
+
+
+
+<label  style="position:absolute;left:100px;">Name of the Student<span class=required>*</span></label>
+&nbsp<input type=text  style="position:absolute;left:258px;" name="sname" required>
+
+<label for="htno" style="position:absolute;left:550px;">Hallticket No<span class=required>*</span></label>
+&nbsp<input type=text id="htno" style="position:absolute;left:650px;" name="rollno" required ><br><br>
+
+<label style="position:absolute;left:100px;">Date of Birth (DOB)</label>
+<input type=date style="position:absolute;left:255px;width:165px;" >
+
+<label style="position:absolute;left:550px;">Gender <span class=required>*</span></label>
+<input type=radio  name="gender" value="male" style="position:absolute;left:650px;" >
+<label style="position:absolute;left:670px;">Male</label>
+<input type=radio name="gender" value="female" style="position:absolute;left:730px;">
+<label style="position:absolute;left:750px;">Female</label><br><br>
+
+<label style="position:absolute;left:100px;">Academic Year <span class=required>*</span></label>
+<select name=year style="position:absolute;left:255px;width:100px">
+<option>  I year</option><option>  II year</option><option>  III year</option><option>  IV year </option>
+</select>
+
+
+<label style="position:absolute;left:435px;">Department <span class=required>*</span></label>
+<select name=depart style="position:absolute;left:535px; ">
+<option>Computer science and Engineering</option><option>Civil Engineering</option><option>Electrical and Electronics Engineering</option><option>Mechanical Engineering</option><option>Electronics and Communication Engineering</option>
+</select><br><br>
+<label style="position:absolute;left:100px;">Section <span class=required>*</span></label>
+<select name="section" style="position:absolute;left:255px;width:100px;"><option>A</option><option>B</option><option>C</option><option>D</option></select><br><br>
+
+<h3>Account Details *</h3>
+
+
+
+<label style="position:absolute;left:100px;">username <span class=required>*</span></label>
+&nbsp<input type=text id=user style="position:absolute;left:255px;" name="user" required>
+
+
+<label for="pass" style="position:absolute;left:550px;">Password <span class=required>*</span></label>
+&nbsp<input type=password id=pass style="position:absolute;left:650px;" name="pass" required><br><br>
+
+
+<label  style="position:absolute;left:100px;">Confirm password <span class=required>*</span></label>
+<input type=password style="position:absolute;left:255px;" required name="cpass">
+
+
+<label for="email" style="position:absolute;left:500px;"> Reference Email <span class=required>*</span></label>
+&nbsp<input type=email id=email style="position:absolute;left:650px;" name="mail" required><br><br><br>
+
+
+
+<h3>Contact Details *</h3>
+
+<label style="position:absolute;left:100px;">Mobile Number <span class=required>*</span></label>
+<input type=text  style="position:absolute;left:255px;" required>
+
+
+<label for="htno" style="position:absolute;left:490px;">Alternative Mobile No</label>
+<input type=text id="htno" style="position:absolute;left:650px;"><br><br>
+
+
+
+<label style="position:absolute;left:100px;">Email <span class=required>*</span></label>
+<input type=text  style="position:absolute;left:255px;" required>
+
+
+<label for="htno" style="position:absolute;left:510px;">Alternative Email</label>
+<input type=emailid="htno" style="position:absolute;left:650px;"  ><br>
+
+<br>
+<label  style="position:absolute;left:100px;">Address:</label><br><br>
+<textarea  placeholder="write your address here!" style="position:absolute;left:100px;height:100px; width:400px;"></textarea><br>
+
+
+<br><br><br><br>
+
+<h4 style="color:red;">Note:</h4>
+<ol>
+<li>Please note that all fields marked with an asterisk (<span class=required>*</span>)are required.</li>
+<li><input type=checkbox required>I agree Terms and Conditions.</li>
+<li><input type=checkbox required>I hereby declare that all the above provided information is true.</li></ol><br><br>
+
+
+<input type=reset style="position:absolute;left:155px;width:90px;height:40px;" value=Reset>
+<a href="C:\Users\rgang\OneDrive\Documents\My login.html"><input type=submit style="position:absolute;left:650px;width:90px;height:40px" value=submit onclick=myfun()></a><br><br><br>
+
+
+
+
+
+</div >
+</form>
+<div style="position:absolute;left:10%;top:210%;">
+<p><pre>  </pre></p>
+<br>
+</div>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

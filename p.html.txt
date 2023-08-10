@@ -1,0 +1,40 @@
+<?php
+$connect=mysqli_connect("localhost","root","student_register_details") or die("connection failed");
+?>
+<html>
+<head>
+<title>display data from database</title>
+</head>
+<body>
+
+
+<form action="" method="post">
+
+<?php 
+ $query="select * from register";
+$result=mysqli_query($connect,$query);
+while($row=mysqli_fetch_assoc($result)){
+
+
+?>
+<label for=''>name</label>
+<input type="text" value="<?php echo $row["name"];?>">
+<label for=''>hallticketno</label>
+<input type="text" value="<?php echo $row["rollno"];?>">
+
+
+<?php
+
+}
+
+?>
+
+</form>
+
+</body>
+
+</html>
+
+
+
+
